@@ -11,16 +11,23 @@
 // 1. What is the difference between an absolute path and a relative path? When
 //    should your links use one vs the other?
 
-//    Your Answer Here
+//    A relative path is a path defined relative to YOU (i.e., your location in
+//    the filesystem); an abolute path, in contrast, always points to the same
+//    place, no matter where you are.
+//
+//    Use relative paths when to link together resoures that are both in the
+//    same project; use absolute paths to refer to resources that are outside of
+//    the project.
 
 // 2. How could we list the contents of a grand-parent (i.e. parent's parent)
 //    directory using a single command? Give the command as your answer.
 
-//    Your Answer Here
+//    ls ../..
 
 // 3. Why is it necessary to do `git add` before doing a `git commit`?
 
-//    Your Answer Here
+//    `git add` takes a set of changes and 'stages' them for inclusion in the
+//    next commit; if nothing is added, then the commit will be empty.
 
 // 4. Briefly explain what each of the following Git commands do.
 //    a. `git init`
@@ -28,11 +35,19 @@
 //    c. `git diff`
 //    d. `git log`
 
-//    Your Answers Here
+//    a. Turn the present directory into a Git repo.
+//    b. Check the state of the repo; specifically, which files' changes are
+//       (or are not) staged.
+//    c. See the content of each unstaged change.
+//    d. Show a history of past commits.
 
 // 5. What is the difference between cloning and forking?
 
-//    Your Answer Here
+//    Cloning is the proces of copying over a Git repository (or at least a
+//    branch of one). This process is independent of GitHub.
+//    Forking, in contrast, is specifically cloning from one repo on GitHub
+//    (under someone else's username) into a new repo on GitHub under *your*
+//    username; forking is a GitHub feature, and is not part of Git.
 
 /// Coding Challenges ///
 
@@ -40,7 +55,7 @@
 //     and calculate the sum of all of those numbers; however, it seems to be
 //     broken. See if you can fix it!
 var sum = 0;
-for (var i = 0; i <= 1000; i++) {
+for (var i = 0; i < 1000; i++) {
   sum += i;
 }
 
@@ -58,12 +73,12 @@ for (var i = 0; i <= 1000; i++) {
 var n = 32;
 var fizzbuzzString = '';
 for (var i = 1; i <= n; i++) {
-  if (i%3 === 0) {
+  if (i%3 === 0 && i%5 === 0) {
+    fizzbuzzString += 'FizzBuzz ';
+  } else if (i%3 === 0) {
     fizzbuzzString += 'Fizz ';
   } else if (i%5 === 0) {
     fizzbuzzString += 'Buzz ';
-  } else if (i%3 === 0 && i%5 === 0) {
-    fizzbuzzString += 'FizzBuzz ';
   } else {
     fizzbuzzString += `${i} `;
   }
@@ -79,7 +94,11 @@ var matrix = [
   [1, 2, 3, 4, 5],
   [6, 7, 8, 9, 10]
 ];
-// Replace This Comment With Your Code
+for (var i = 0; i < matrix.length; i++) {
+  for (var j = 0; j < matrix[i].length; j++) {
+    matrix[i][j] *= 2;
+  }
+}
 
 /// DO NOT EDIT BELOW THIS LINE ///
 module.exports = {
