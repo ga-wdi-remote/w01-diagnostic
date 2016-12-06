@@ -65,7 +65,7 @@ for (var i = 1; i <= n; i++) {
   } else if (i%3 === 0 && i%5 === 0) {
     fizzbuzzString += 'FizzBuzz ';
   } else {
-    fizzbuzzString += '' + i + ' ';
+    fizzbuzzString += `${i} `;
   }
 }
 fizzbuzzString = fizzbuzzString.slice(0, -1);
