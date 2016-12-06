@@ -18,17 +18,17 @@
 
 //    Your Answer Here
 
-// 3. Briefly explain what each of the following Git commands do.
+// 3. Why is it necessary to do `git add` before doing a `git commit`?
+
+//    Your Answer Here
+
+// 4. Briefly explain what each of the following Git commands do.
 //    a. `git init`
 //    b. `git status`
 //    c. `git diff`
 //    d. `git log`
 
 //    Your Answers Here
-
-// 4. Why is it necessary to do `git add` before doing a `git commit`?
-
-//    Your Answer Here
 
 // 5. What is the difference between cloning and forking?
 
